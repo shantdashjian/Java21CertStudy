@@ -26,20 +26,27 @@ class Thing extends Thang implements Serializable {
     private static final long serialVersionUID = 1;
   int a;
 //  static int b;
-  int y = 100;
+//  int y = 100;
   transient int z = 200;
+  int newInt = 99;
 
   Thing(int x, int y, int z) {
     super(x);
     System.out.println("Thing constructor");
     this.x = x;
-    this.y = y;
+//    this.y = y;
     this.z = z;
   }
 
   @Override
+//  public String toString() {
+//    return "x = " + x + ", y = " + y + ", z = " + z + ", a = " + a;
+//  }
+//  public String toString() {
+//    return "x = " + x + ", y REMOVED :) " + ", z = " + z + ", a = " + a;
+//  }
   public String toString() {
-    return "x = " + x + ", y = " + y + ", z = " + z + ", a = " + a;
+    return "x = " + x + ", y REMOVED :) " + ", z = " + z + ", a = " + a + " newInt = " + newInt;
   }
 
   void doStuff() {}
@@ -48,13 +55,13 @@ class Thing extends Thang implements Serializable {
 
 public class Example {
   public static void main(String[] args) throws Throwable {
-    Thing t = new Thing(1, 2, 3);
-    System.out.println(t);
-//    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    FileOutputStream baos = new FileOutputStream("data.dat");
-    ObjectOutputStream oos = new ObjectOutputStream(baos);
-    oos.writeObject(t);
-    oos.close();
+//    Thing t = new Thing(1, 2, 3);
+//    System.out.println(t);
+////    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//    FileOutputStream baos = new FileOutputStream("data.dat");
+//    ObjectOutputStream oos = new ObjectOutputStream(baos);
+//    oos.writeObject(t);
+//    oos.close();
     System.out.println("--------------------");
 //    ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
     FileInputStream bais = new FileInputStream("data.dat");

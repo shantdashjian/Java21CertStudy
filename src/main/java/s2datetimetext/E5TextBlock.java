@@ -3,6 +3,7 @@ package s2datetimetext;
 public class E5TextBlock {
   public static void main(String[] args) {
 //    String msg = """// can't have anything here!
+//    String msg = """
 //    """;
     String msg = """   
         """; // common leading whitespace, and first newline, are elided

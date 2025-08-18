@@ -21,5 +21,8 @@ public class E3Booleans {
     System.out.println(Boolean.parseBoolean("true"));
     System.out.println(Boolean.parseBoolean("false"));
     System.out.println(Boolean.parseBoolean(" true "));
+
+
+
   }
 }

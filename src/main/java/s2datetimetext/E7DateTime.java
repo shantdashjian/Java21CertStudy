@@ -17,6 +17,9 @@ public class E7DateTime {
     LocalDate apr4 = mar4.withMonth(Month.APRIL.getValue());
     System.out.println(apr4);
 
+    feb28 = LocalDate.of(2025, 2, 28);
+    System.out.println(feb28.withDayOfMonth(31));
+
     System.out.println("Day of week is " + feb28.get(ChronoField.DAY_OF_WEEK));
     System.out.println("Hour of day is " + feb28.get(ChronoField.HOUR_OF_DAY)); // Exception
   }

@@ -295,7 +295,7 @@ virtual threads.
 state now?
 
 4) Thread A writes "X" to a static String member of a class, a few
-milliseconds laterThread B reads the value and prints it. What is
+milliseconds later Thread B reads the value and prints it. What is
 the result? What's this called?
 
 5) Your thread calls tryLock() on an already-locked Lock object,

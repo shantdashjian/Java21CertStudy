@@ -11,6 +11,9 @@ public class E1BasicTypesLiterals {
     var x3 = 123_456_789_000.; // also D/d
     var x4 = 123_456_789_000F; // also f
 
+    Object obj = 3.14F;
+    System.out.println(obj.getClass().getName());
+
     int x5 = 010; // 8!!!!
     System.out.println("010 -> " + x5);
     int x6 = 0x10; // 16
