@@ -72,3 +72,25 @@ public class E3Initialization {
     c = new Child();
   }
 }
+
+class EnumLike {
+  static {
+    System.out.println("about to get going");
+  }
+  static EnumLike member = new EnumLike();
+  static {
+    System.out.println("running static initializer");
+  }
+  static String msg = "Not really";
+  {
+    System.out.println("running instance init, msg is " + EnumLike.msg);
+  }
+}
+
+class TryEnumLike {
+  public static void main(String[] args) {
+    System.out.println("1");
+    System.out.println(EnumLike.member);
+    System.out.println("2");
+  }
+}

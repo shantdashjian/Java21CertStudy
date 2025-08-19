@@ -33,7 +33,7 @@ public class E4UsingCollectors {
             // downstream collector to make a single item for the map's value from
             // the potentially many items coming along
             Collectors.mapping(s -> s.name(), Collectors.toList())))
-        .entrySet() // extract the entry set from the generated Map<String, List<Student>>
+        .entrySet() // extract the entry set from the generated Map<String, List<String>>
         .forEach(e -> System.out.println("Students " + e.getValue() + " have grade " + e.getKey()));
     System.out.println("---------------------------");
 
@@ -45,7 +45,7 @@ public class E4UsingCollectors {
             // downstream collector to make a single item for the map's value from
             // the potentially many items coming along
             Collectors.mapping(s -> s.name(), Collectors.joining(", "))))
-        .entrySet() // extract the entry set from the generated Map<String, List<Student>>
+        .entrySet() // extract the entry set from the generated Map<String, String>
         .forEach(e -> System.out.println("Students " + e.getValue() + " have grade " + e.getKey()));
 
     System.out.println("---------------------------");
@@ -57,7 +57,7 @@ public class E4UsingCollectors {
             // downstream collector to make a single item for the map's value from
             // the potentially many items coming along
             Collectors.counting()))
-        .entrySet() // extract the entry set from the generated Map<String, List<Student>>
+        .entrySet() // extract the entry set from the generated Map<String, Long>
         .forEach(e -> System.out.println("Students " + e.getValue() + " have grade " + e.getKey()));
 
   }

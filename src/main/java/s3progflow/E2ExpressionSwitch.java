@@ -7,6 +7,7 @@ public class E2ExpressionSwitch {
     switch (s) {
       case "Goodbye" -> {
         System.out.println("Au revoir");
+        if (Math.random() > 0.5) break;
         System.out.println("nope");
       }
       case "Hello", "Guten Tag" -> System.out.println("Bonjour");
